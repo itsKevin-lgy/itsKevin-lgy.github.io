@@ -19,27 +19,35 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"itskevin-lgy.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+    <meta name="description" content="近期阅读了弱监督异常检测方向综述论文“Weakly Supervised Anomaly Detection: A Survey”，借此搭建博客的机会，第一篇日志就来记录对这篇文章的梳理。论文链接：https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2302.04549">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://itskevin-lgy.github.io/2023/03/28/hello-world/index.html">
+<meta property="og:title" content="“Weakly Supervised Anomaly Detection:A Survey”">
+<meta property="og:url" content="https://itskevin-lgy.github.io/2023/03/30/paper-read-1/index.html">
 <meta property="og:site_name" content="LuGuanyu&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta property="og:description" content="近期阅读了弱监督异常检测方向综述论文“Weakly Supervised Anomaly Detection: A Survey”，借此搭建博客的机会，第一篇日志就来记录对这篇文章的梳理。论文链接：https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2302.04549">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-28T14:14:59.576Z">
-<meta property="article:modified_time" content="2023-03-30T12:35:46.210Z">
+<meta property="og:image" content="https://itskevin-lgy.github.io/images/paperead1/paperead1.jpg">
+<meta property="og:image" content="https://itskevin-lgy.github.io/images/paperead1/paperead2.jpg">
+<meta property="og:image" content="https://itskevin-lgy.github.io/images/paperead1/paperead3.jpg">
+<meta property="og:image" content="https://itskevin-lgy.github.io/images/paperead1/paperead4.jpg">
+<meta property="og:image" content="https://itskevin-lgy.github.io/images/paperead1/paperead5.jpg">
+<meta property="og:image" content="https://itskevin-lgy.github.io/images/paperead1/paperead6.jpg">
+<meta property="og:image" content="https://itskevin-lgy.github.io/images/paperead1/paperead7.jpg">
+<meta property="article:published_time" content="2023-03-30T12:34:15.000Z">
+<meta property="article:modified_time" content="2023-03-30T13:25:33.762Z">
 <meta property="article:author" content="LuGuanyu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://itskevin-lgy.github.io/images/paperead1/paperead1.jpg">
 
 
-<link rel="canonical" href="https://itskevin-lgy.github.io/2023/03/28/hello-world/">
+<link rel="canonical" href="https://itskevin-lgy.github.io/2023/03/30/paper-read-1/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://itskevin-lgy.github.io/2023/03/28/hello-world/","path":"2023/03/28/hello-world/","title":"Hello World"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://itskevin-lgy.github.io/2023/03/30/paper-read-1/","path":"2023/03/30/paper-read-1/","title":"“Weakly Supervised Anomaly Detection:A Survey”"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hello World | LuGuanyu's Blog</title>
+<title>“Weakly Supervised Anomaly Detection:A Survey” | LuGuanyu's Blog</title>
   
 
 
@@ -111,7 +119,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problems"><span class="nav-number">1.</span> <span class="nav-text">Problems</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AD-with-Incomplete-Supervision"><span class="nav-number">2.</span> <span class="nav-text">AD with Incomplete Supervision</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AD-with-Inexact-Supervision"><span class="nav-number">3.</span> <span class="nav-text">AD with Inexact Supervision</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AD-with-inaccurate-supervision"><span class="nav-number">4.</span> <span class="nav-text">AD with inaccurate supervision</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -162,7 +170,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://itskevin-lgy.github.io/2023/03/28/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://itskevin-lgy.github.io/2023/03/30/paper-read-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -175,12 +183,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Hello World | LuGuanyu's Blog">
+      <meta itemprop="name" content="“Weakly Supervised Anomaly Detection:A Survey” | LuGuanyu's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          “Weakly Supervised Anomaly Detection:A Survey”
         </h1>
 
         <div class="post-meta-container">
@@ -190,15 +198,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2023-03-28 22:14:59" itemprop="dateCreated datePublished" datetime="2023-03-28T22:14:59+08:00">2023-03-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-30 20:35:46" itemprop="dateModified" datetime="2023-03-30T20:35:46+08:00">2023-03-30</time>
+      <time title="创建时间：2023-03-30 20:34:15 / 修改时间：21:25:33" itemprop="dateCreated datePublished" datetime="2023-03-30T20:34:15+08:00">2023-03-30</time>
     </span>
 
   
@@ -211,21 +213,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+        <p>近期阅读了弱监督异常检测方向综述论文“Weakly Supervised Anomaly Detection: A Survey”，借此搭建博客的机会，第一篇日志就来记录对这篇文章的梳理。<br>论文链接：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2302.04549">https://arxiv.org/abs/2302.04549</a></p>
 <span id="more"></span>
 
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h1 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h1><p><font size=3 font face="Times New Roman">To address this issue, researchers have developed AD methods that can work with <strong>incomplete</strong>, <strong>inexact</strong>, and <strong>inaccurate</strong> supervision, collectively summarized as weakly supervised anomaly detection (WSAD) methods.<br>不完整：涉及到只有部分输入数据被标记的情况；<br>不精确：检测到的标签不像它们需要的那样精确，例如，由于标签成本，只有粗粒度(而不是细粒度)标签信息可用；<br>不准确：标签被噪声损坏的问题，这可能是由于机器错误和注释错误造成的。</font></p>
+<h1 id="AD-with-Incomplete-Supervision"><a href="#AD-with-Incomplete-Supervision" class="headerlink" title="AD with Incomplete Supervision"></a>AD with Incomplete Supervision</h1><p><img src="/images/paperead1/paperead1.jpg" alt="alt"><br><img src="/images/paperead1/paperead2.jpg" alt="alt"><br><font size=3 font face="Times New Roman">开放性问题和未来方向<br>1.高效的标签获取；<br>2.Few-shot /元学习：除了WSL之外，还存在其他处理不完全监督的方法，但在AD中应用有限。具体而言，Few-shot 学习的设置在AD中更实用，值得进一步研究；<br>3.平衡非标记数据和标记数据的权重；<br><img src="/images/paperead1/paperead3.jpg" alt="alt"> 可以使用自动ML来设置权重<br>4.超参数(HP)调优和模型选择。</font></p>
+<h1 id="AD-with-Inexact-Supervision"><a href="#AD-with-Inexact-Supervision" class="headerlink" title="AD with Inexact Supervision"></a>AD with Inexact Supervision</h1><p><font size=3 font face="Times New Roman">虽然有标签，但标签不够详细，无法产生令人满意的检测性能。<br>在金融欺诈检测中，公司可以从监管机构或第三方获得用户级别的异常标签。这些用户级标签只表明用户是否从事了非法活动，如欺诈、洗钱或赌博，而我们更感兴趣的是哪些交易是异常的(即，交易级结果)。<strong>（问题和目前实验室有项工作相似…）</strong></font><br><img src="/images/paperead1/paperead4.jpg" alt="alt"><br><img src="/images/paperead1/paperead5.jpg" alt="alt"></p>
+<h1 id="AD-with-inaccurate-supervision"><a href="#AD-with-inaccurate-supervision" class="headerlink" title="AD with inaccurate supervision"></a>AD with inaccurate supervision</h1><p><font size=3 font face="Times New Roman">考虑标签有噪声和损坏的情况，这在准确注释昂贵的AD应用程序中也很常见<br>面临着现有方法无法处理的数据不平衡等额外挑战</font><br><img src="/images/paperead1/paperead6.jpg" alt="alt"><br><img src="/images/paperead1/paperead7.jpg" alt="alt"><br><font size=3 font face="Times New Roman"></p>
+<p>标签聚合和校正(LAC)：<br>标签聚合阶段通过加权投票将多源极噪声标签整合到聚合标签中，然后标签校正阶段通过一些精确标记的实例对聚合标签进行校正，从而训练出鲁棒检测器。[Zhang et al., 2021]<br>ADMoE利用专家混合架构，鼓励从多个噪声源进行专业化和可扩展的学习。它通过共享大多数模型参数来捕捉不同噪声标签集之间的相似性，同时通过建立“专家”子网络来鼓励专业化。[Zhao et al, 2023]<br>未来方向：<br>利用自监督学习去噪标签，使用SSL来减少AD标签中的噪声或作为“正则化器”的潜力。</p>
 
     </div>
 
@@ -239,11 +234,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2023/03/28/hello-world/" rel="prev" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/03/30/paper-read-1/" rel="next" title="“Weakly Supervised Anomaly Detection:A Survey”">
-                  “Weakly Supervised Anomaly Detection:A Survey” <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>

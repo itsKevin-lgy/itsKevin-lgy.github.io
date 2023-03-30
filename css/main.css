@@ -2510,3 +2510,34 @@ body {
   background-size: cover;
   background-position: 50% 50%;
 }
+.content-wrap {
+  opacity: 0.95;
+}
+.sidebar {
+  opacity: 0.95;
+}
+.header-inner {
+  opacity: 0.95;
+  z-index: 10;
+}
+.popup {
+  opacity: 0.95;
+}
+.main-inner {
+  opacity: 0.95;
+}
+.pagination {
+  opacity: 0.95;
+}
+.post-block {
+  opacity: 0.95;
+}
+.sidebar-inner {
+  opacity: 0.95;
+}
+.comments {
+  opacity: 0.95;
+}
+.posts-expand {
+  opacity: 0.95;
+}
